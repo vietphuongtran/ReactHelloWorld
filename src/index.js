@@ -1,17 +1,17 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import React, {Component} from 'react'
+import {render} from 'react-dom'
+import './index.css'
+import Networkpage from './Networkpage'
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+//Component:
+//1. Discussion
+//2. 2 Side bars
+let faqList = [
+    {"question": "How to write a perfect C.V", "answer": "Research, research, research"},
+    {"question": "How to get HR contact", "answer": "Company's website and directory" }
+]
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+render (
+    <Networkpage faqs={faqList} />,
+    document.getElementById('root')
+)
