@@ -1,10 +1,11 @@
 import React, { Component } from 'react'
 
-export const Faq = ({ question = "undefined", answer = "undefined"}) => {
+export const Faq = ({ topic ="", question = "undefined", answer = "undefined"}) => {
     return (
-        <section>
-            <h2>{question}</h2>
-            <div>{answer}</div>
+        <section className="mainContent">
+            <h2>{topic}</h2>
+            <div>Q: {question}</div>
+            <div>A: {answer}</div>
         </section>
     )
 }
